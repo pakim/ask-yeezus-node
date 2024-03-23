@@ -1,0 +1,120 @@
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(var(--rotate), gold, royalblue, gold);
+  animation: rotate 6s linear infinite;
+}
+
+.div-bg {
+  background-image: url("/assets/kanye.jpg");
+  background-size: cover;
+  background-position: top;
+  width: 99%;
+  height: 99%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.div-quote {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  /* border-radius: 20px; */
+  align-self: flex-start;
+  /* box-shadow: 0 0 50px 10px rgba(255, 215, 0, 0.5); */
+  padding: 10px;
+  margin-left: 30px;
+  font-weight: 800;
+  font-size: 2rem;
+  font-family: "Fredericka the Great", serif;
+}
+
+.blur-bg {
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(ellipse, #fff 50%, gold);
+  box-shadow: 0 0 50px 10px rgba(255, 215, 0, 0.5);
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  filter: blur(20px);
+}
+
+.div-quote span {
+  z-index: 2;
+}
+
+.kanye {
+  align-self: flex-end;
+  margin-top: 10px;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 30px;
+  font-family: "Cinzel", serif;
+}
+
+form {
+  padding-bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+form input {
+  font-size: 1.5rem;
+}
+
+#question {
+  width: 40%;
+  padding: 10px;
+}
+
+#button {
+  padding: 10px 20px;
+  font-family: "Fredericka the Great", serif;
+  background-color: #222;
+  color: #fff;
+}
+
+.shining-ball {
+  width: 80px;
+  height: 80px;
+  background-image: radial-gradient(circle, #fff, gold);
+  border-radius: 50%;
+  box-shadow: 0 0 20px 50px rgba(255, 215, 0, 0.5);
+  filter: blur(10px);
+}
+
+@keyframes rotate {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
